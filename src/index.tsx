@@ -3,6 +3,9 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import { App } from './modules/app/'
 import reportWebVitals from './reportWebVitals'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 ReactDOM.render(
   <BrowserRouter>

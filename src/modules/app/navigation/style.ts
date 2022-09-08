@@ -3,11 +3,15 @@ import { colors, screenSizes } from '../../../styles/theme'
 
 export const NavHeader = styled.header`
   background-color: transparent;
-
-  z-index: 1;
+  z-index: 2;
+  @media (max-width: ${screenSizes.L}px) {
+    padding: 15px;
+  }
   @media (min-width: ${screenSizes.L}px) {
     padding-top: 50px;
     padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   @media (min-width: ${screenSizes.XXL}px) {
     padding-left: 70px;
@@ -17,8 +21,8 @@ export const NavHeader = styled.header`
 
 export const FlexBox = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `
 
 export const Logo = styled.div`
@@ -133,4 +137,11 @@ export const ColorDiv = styled.div<I_FlagList>`
   background-color: ${(props) => (props.active?.valueOf() === false ? '' : `${colors.navyblue}`)};
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+`
+export const SideMenu = styled.div`
+  cursor: pointer;
+  margin-top: -15px;
+  @media (min-width: ${screenSizes.L}px) {
+    display: none;
+  }
 `

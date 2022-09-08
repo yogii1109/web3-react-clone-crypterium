@@ -6,10 +6,12 @@ export interface Sizes {
   XXS: number | string
   XS: number | string
   S: number | string
+  SS: number | string
   M: number | string
   L: number | string
   XL: number | string
   XXL: number | string
+  XXXL: number | string
 }
 
 export const gapSizes: Partial<Sizes> = {
@@ -22,31 +24,35 @@ export const gapSizes: Partial<Sizes> = {
 
 export const screenSizes: Partial<Sizes> = {
   XS: 480,
-  S: 640,
-  M: 800,
+  S: 560,
+  M: 768,
   L: 992,
-  XL: 1280,
+  XL: 1200,
   XXL: 1400,
 }
 
 export const fontSizes: Sizes = {
   XXS: '14px',
   XS: '16px',
-  S: '18px',
+  SS: '18px',
+  S: '20px',
   M: '24px',
   L: '32px',
-  XL: '36px',
-  XXL: '48px',
+  XL: '40px',
+  XXL: '45px',
+  XXXL: '70px',
 }
 
 export const lineHeights: Sizes = {
   XXS: '14px',
   XS: '24px',
   S: '18px',
-  M: '24px',
+  SS: '',
+  M: '20px',
   L: '32px',
   XL: '36px',
   XXL: '48px',
+  XXXL: '70px',
 }
 
 export const textAreaSizes = {
@@ -88,9 +94,28 @@ export interface Colors {
   lightGrey: string
   darkGrey: string
   fadedGrey: string
+
+  grey: string
+  leafgreen: string
   dropdownbg: string
   lightgreen: string
   navyblue: string
+  spaceGrey: string
+  red: string
+  lightblack: string
+  lightgrey: string
+  darkBlue: string
+  spaceGray: string
+  whitishGrey: string
+  whiteborder: string
+  fadedGreen: string
+  borderGrey: string
+  blueicon: string
+  greyblack: string
+  yellowwhite: string
+  lightestblue: string
+  palewhite: string
+  purple: string
 }
 
 export const colors: Colors = {
@@ -125,6 +150,24 @@ export const colors: Colors = {
   dropdownbg: '#292b30',
   lightgreen: '#10cb6c',
   navyblue: '#2f4a7e',
+  spaceGrey: '#555',
+  red: '#f6003b',
+  grey: '#888a8b',
+  lightblack: '#404040',
+  leafgreen: '#43c1a8',
+  lightgrey: '#b8b8b8',
+  darkBlue: '#4262c1',
+  spaceGray: '#737373',
+  whitishGrey: 'rgba(200,200,200,.28)',
+  whiteborder: '#f8f8f8',
+  fadedGreen: 'rgba(67,193,168,.66)',
+  borderGrey: '#e3e3e3',
+  blueicon: '#497bfd',
+  greyblack: ' #34363b',
+  yellowwhite: '#c9c9c9',
+  lightestblue: '#eef2f4',
+  palewhite: '#fafbfb',
+  purple: '#694e96',
 }
 
 export interface Theme {
