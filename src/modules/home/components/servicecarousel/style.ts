@@ -3,10 +3,9 @@ import { screenSizes } from '../../../../styles/theme'
 import Slider from 'react-slick'
 
 export const StyledSlider = styled(Slider)`
-  /* width: 20vw; */
-  .slick-slide {
-    position: absolute;
-    top: 0;
+  width: 65vw;
+  @media (max-width: ${screenSizes.M}px) {
+    width: 80vw;
   }
 `
 
@@ -22,6 +21,7 @@ export const Wrapper = styled.div<I_Reverse>`
   margin-left: -15px;
   @media (max-width: ${screenSizes.M}px) {
     row-gap: 20px;
+    place-items: center;
   }
   @media (min-width: ${screenSizes.M}px) {
     grid-template-columns: 6fr 6fr;
@@ -42,5 +42,8 @@ export const GridItem = styled.div<I_GridItem>`
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: ${(props) => (props.marginLeft ? `${props.marginLeft}` : '')};
+  overflow: hidden;
+  @media (min-width: ${screenSizes.L}px) {
+    margin-left: ${(props) => (props.marginLeft ? `${props.marginLeft}` : '')};
+  }
 `

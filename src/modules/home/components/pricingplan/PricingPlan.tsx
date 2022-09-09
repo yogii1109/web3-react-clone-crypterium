@@ -53,10 +53,10 @@ export const PricingPlan: React.FC = () => {
         </Styled.PricingTab>
         <Styled.GridBox>
           {Pricing.map((item: I_Pricing, index: number) => (
-            <Styled.GridItem key={index}>
+            <Styled.GridItem key={index} color={item.color}>
               <Styled.PriceHeader>
                 <Styled.PriceHeading>{item.plan}</Styled.PriceHeading>
-                <Styled.Price>{item.price}</Styled.Price>
+                <Styled.Price color={item.color}>{item.price}</Styled.Price>
               </Styled.PriceHeader>
               <Styled.DescList>
                 <Styled.ListItem active={false}>
@@ -81,7 +81,7 @@ export const PricingPlan: React.FC = () => {
                   <Styled.ItemValue>{item.contract}</Styled.ItemValue>
                 </Styled.ListItem>
               </Styled.DescList>
-              <Styled.CustomButton>Get Started</Styled.CustomButton>
+              <Styled.CustomButton color={item.color}>Get Started</Styled.CustomButton>
             </Styled.GridItem>
           ))}
         </Styled.GridBox>

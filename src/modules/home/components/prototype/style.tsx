@@ -16,7 +16,7 @@ export const Section = styled.div<I_Section>`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media (max-width: ${screenSizes.S}px) {
+  @media (max-width: ${screenSizes.M}px) {
     padding: 70px 15px;
   }
   @media (min-width: ${screenSizes.M}px) {

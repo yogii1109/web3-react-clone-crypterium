@@ -10,8 +10,8 @@ export const NewCardCarousel: React.FC = () => {
     dots: true,
     autoplay: true,
     arrows: false,
-    speed: 1000,
-    slidesToShow: 1,
+    speed: 1500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     paueOnHover: true,
     className: 'center',
@@ -19,13 +19,11 @@ export const NewCardCarousel: React.FC = () => {
       {
         breakpoint: 560,
         settings: {
-          centerMode: true,
-          centerPadding: `20%`,
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 767,
+        breakpoint: 1100,
         settings: {
           centerMode: false,
           slidesToShow: 1,
@@ -34,7 +32,7 @@ export const NewCardCarousel: React.FC = () => {
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
@@ -62,14 +60,14 @@ export const ServiceCarousel: React.FC = () => {
               Why choose Crypto Mining Farm?
             </Shared.Heading>
           </Shared.Header>
-          <Shared.Para marginTop="25px" marginBottom="0px" hasBackground={true}>
+          <Shared.Para marginTop="25px" marginBottom="25px" hasBackground={true}>
             It is also used in server-side network programming with runtime environments such as Node.js, game
             development and the creation of desktop and mobile applications.
           </Shared.Para>
         </Styled.GridItem>
-        {/* <Styled.GridItem  marginLeft='8.33%'>
-                    <NewCardCarousel/>
-                </Styled.GridItem> */}
+        <Styled.GridItem marginLeft="8.33%">
+          <NewCardCarousel />
+        </Styled.GridItem>
       </Styled.Wrapper>
     </Shared.Section>
   )

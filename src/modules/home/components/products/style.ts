@@ -141,8 +141,8 @@ export const CardImg = styled.div`
 export const CardContent = styled.div`
   background-color: ${colors.whiteborder};
   border-radius: 0 0 5px 5px;
-  @media (min-width: ${screenSizes.M}px) {
-    padding: 35px 20px;
+  @media (max-width: ${screenSizes.M}px) {
+    padding: 25px 10px;
   }
   @media (min-width: ${screenSizes.M}px) {
     padding: 35px 30px;

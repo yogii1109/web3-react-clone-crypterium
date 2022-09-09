@@ -100,9 +100,16 @@ export const GridBox = styled.div`
     grid-template-columns: repeat(4, 4fr);
   }
 `
+interface I_GridItem {
+  color?: string
+}
 
-export const GridItem = styled.div`
-  border: 5px solid ${colors.darkBlue};
+export const GridItem = styled.div<I_GridItem>`
+  border: ${(props) =>
+    (props.color == 'purple' && `5px solid ${colors.purple}`) ||
+    (props.color == 'darkBlue' && `5px solid ${colors.darkBlue}`) ||
+    (props.color == 'red' && `5px solid ${colors.red}`) ||
+    (props.color == 'leafgreen' && `5px solid ${colors.leafgreen}`)};
   border-radius: 10px;
   padding: 70px 25px 40px;
   display: flex;
@@ -120,9 +127,13 @@ export const PriceHeading = styled.h4`
   text-align: center;
 `
 
-export const Price = styled.p`
+export const Price = styled.p<I_GridItem>`
   font-size: ${fontSizes.L};
-  color: ${colors.darkBlue};
+  color: ${(props) =>
+    (props.color == 'purple' && `${colors.purple}`) ||
+    (props.color == 'darkBlue' && `${colors.darkBlue}`) ||
+    (props.color == 'red' && `${colors.red}`) ||
+    (props.color == 'leafgreen' && `${colors.leafgreen}`)};
   margin: 15px 0 0;
   font-weight: 900;
   text-align: center;
@@ -169,9 +180,13 @@ export const ItemValue = styled.strong`
   text-align: center;
 `
 
-export const CustomButton = styled.div`
+export const CustomButton = styled.div<I_GridItem>`
   padding: 20px 30px;
-  background-color: ${colors.darkBlue};
+  background-color: ${(props) =>
+    (props.color == 'purple' && `${colors.purple}`) ||
+    (props.color == 'darkBlue' && `${colors.darkBlue}`) ||
+    (props.color == 'red' && `${colors.red}`) ||
+    (props.color == 'leafgreen' && `${colors.leafgreen}`)};
   color: ${colors.white};
   font-size: ${fontSizes.XS};
   width: 100%;

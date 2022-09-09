@@ -5,6 +5,7 @@ export interface I_Pricing {
   setup: string
   maintainance: string
   contract: string
+  color: string
 }
 
 export const Pricing: I_Pricing[] = [
@@ -15,6 +16,7 @@ export const Pricing: I_Pricing[] = [
     setup: 'Free Setup',
     maintainance: '$0.299',
     contract: '24 Months',
+    color: 'darkBlue',
   },
   {
     plan: 'Standard',
@@ -23,6 +25,7 @@ export const Pricing: I_Pricing[] = [
     setup: 'Free Setup',
     maintainance: '$0.299',
     contract: '24 Months',
+    color: 'purple',
   },
   {
     plan: 'Optima',
@@ -31,6 +34,7 @@ export const Pricing: I_Pricing[] = [
     setup: 'Free Setup',
     maintainance: '$0.299',
     contract: '24 Months',
+    color: 'leafgreen',
   },
   {
     plan: 'Premium',
@@ -39,5 +43,6 @@ export const Pricing: I_Pricing[] = [
     setup: 'Free Setup',
     maintainance: '$0.299',
     contract: '24 Months',
+    color: 'red',
   },
 ]
