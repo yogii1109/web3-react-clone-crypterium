@@ -24,7 +24,7 @@ export const Navigation: React.FC<I_Navigation> = (props) => {
 
   return (
     <>
-      <Styled.NavHeader>
+      <Styled.NavHeader sideBarActive={sideBarActive}>
         <Styled.FlexBox>
           <Styled.Logo>{sideBarActive ? <img src={logo2} /> : <img src={logo} />}</Styled.Logo>
           <Styled.Navigation>

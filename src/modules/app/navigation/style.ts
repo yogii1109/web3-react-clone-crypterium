@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import { colors, screenSizes } from '../../../styles/theme'
 
-export const NavHeader = styled.header`
-  background-color: transparent;
+interface I_NavHeader {
+  sideBarActive?: boolean
+}
+
+export const NavHeader = styled.header<I_NavHeader>`
+  background-color: ${(props) => (props.sideBarActive === true ? `${colors.white}` : `transparent`)};
   z-index: 2;
   @media (max-width: ${screenSizes.L}px) {
     padding: 15px;

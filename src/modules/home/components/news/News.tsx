@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Carousel } from 'react-responsive-carousel'
 
-import { useWindowSize } from '../../../../shared/hooks/useWidth'
-import bgimage from '../../../../assets/images/bg_image.png'
 import * as Styled from './style'
 import * as Shared from '../../../../styles/styled'
 import { newsblock, I_NewsCard } from './utils'

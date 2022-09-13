@@ -119,6 +119,10 @@ export const GridItem = styled.div<I_GridItem>`
 
 export const Card = styled.div`
   width: 100%;
+  transition: ease-in trasnform 1s;
+  &:hover {
+    transform: scale(1.01);
+  }
 `
 
 export const CardImg = styled.div`

@@ -4,9 +4,9 @@ import { I_Option } from '../../../shared/dropDown/DropDown'
 import { colors, screenSizes } from '../../../styles/theme'
 
 export const Container = styled.div`
-  z-index: 1;
+  z-index: 2;
   position: absolute;
-  top: 0;
+  top: 71px;
   height: 100vh;
   width: 100vw;
   background-color: ${colors.white};
@@ -46,13 +46,13 @@ export const BoxOption = styled.div<I_BoxOption>`
   color: ${colors.spaceGrey};
   margin-top: 20px;
   cursor: pointer;
-  &:first-child {
+  /* &:first-child {
     margin-top: 0;
     text-decoration: underline;
     text-decoration-color: ${colors.lightgreen};
     text-underline-offset: 8px;
     text-decoration-thickness: 2px;
-  }
+  } */
 `
 export const NavButtons = styled.ul`
   margin-top: 60px;

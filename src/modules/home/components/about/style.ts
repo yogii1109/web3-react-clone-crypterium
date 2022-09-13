@@ -31,6 +31,27 @@ export const Box = styled.div`
   margin-left: -15px;
   width: 100%;
   padding: 15px;
+  animation: fadeIn 1s ease;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+    from {
+      left: -30px;
+    }
+    to {
+      left: 0px;
+    }
+  }
 `
 
 export const AboutInfo = styled.h5`

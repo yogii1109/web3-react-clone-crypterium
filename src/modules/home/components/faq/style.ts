@@ -95,6 +95,7 @@ export const QuestionWrap = styled.div`
 `
 
 export const Icon = styled.div`
+  cursor: pointer;
   position: absolute;
   right: 0;
   top: 0;
@@ -109,12 +110,13 @@ interface I_Answer {
 }
 export const Answer = styled.div<I_Answer>`
   padding-bottom: 20px;
-  display: none;
+  display: ${(props) => (props.display?.valueOf() === true ? 'block' : 'none')};
 `
 
 export const Para = styled.p`
   margin: 0;
   padding: 0;
+  color: ${colors.grey};
 `
 
 export const Button = styled.div`

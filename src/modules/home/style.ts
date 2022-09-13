@@ -107,8 +107,7 @@ export const Box = styled.div``
 export const Number = styled.span`
   color: ${colors.white};
   font-size: ${fontSizes.XXL};
-  font-style: bold;
-  font-weight: 900;
+  font-weight: 1000;
   @media (max-width: ${screenSizes.XS}px) {
     font-size: ${fontSizes.XL};
     font-weight: 700;

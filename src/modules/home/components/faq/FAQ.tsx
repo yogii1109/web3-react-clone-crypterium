@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IconContext } from 'react-icons'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { colors } from '../../../../styles/theme'
@@ -7,6 +7,16 @@ import * as Styled from './style'
 import { questions, I_Question } from './util'
 
 export const FAQ = () => {
+  const [answerDisplyId, setAnswerDisplayId] = useState<number>(0)
+
+  const handleFAQAnwers = (id: number) => {
+    if (id === answerDisplyId) {
+      setAnswerDisplayId(-1)
+    } else {
+      setAnswerDisplayId(id)
+    }
+  }
+
   return (
     <Styled.Section paddingtop="140px" paddingbottom="140px">
       <Styled.Wrapper>
@@ -17,18 +27,34 @@ export const FAQ = () => {
         <Styled.FlexBox>
           <Styled.Container>
             <Styled.Questions>
-              {questions.map((item: I_Question) => (
-                <Styled.QuestionWrap>
+              {questions.map((item: I_Question, index: number) => (
+                <Styled.QuestionWrap key={index}>
                   <Styled.QuestionDiv>
                     <Styled.Question>{item.question}</Styled.Question>
-                    <Styled.Icon>
-                      <IconContext.Provider value={{ style: {}, size: '30px', color: `${colors.blueicon}` }}>
-                        <AiOutlinePlusCircle />
-                      </IconContext.Provider>
+                    <Styled.Icon
+                      onClick={() => {
+                        handleFAQAnwers(index)
+                      }}
+                    >
+                      {answerDisplyId === index ? (
+                        <IconContext.Provider
+                          value={{
+                            style: { transform: `rotate(-135deg)` },
+                            size: '30px',
+                            color: `${colors.leafgreen}`,
+                          }}
+                        >
+                          <AiOutlinePlusCircle />
+                        </IconContext.Provider>
+                      ) : (
+                        <IconContext.Provider value={{ style: {}, size: '30px', color: `${colors.blueicon}` }}>
+                          <AiOutlinePlusCircle />
+                        </IconContext.Provider>
+                      )}
                     </Styled.Icon>
                   </Styled.QuestionDiv>
-                  <Styled.Answer>
-                    <Styled.Para>{item.question}</Styled.Para>
+                  <Styled.Answer display={answerDisplyId === index}>
+                    <Styled.Para>{item.answer}</Styled.Para>
                   </Styled.Answer>
                 </Styled.QuestionWrap>
               ))}
