@@ -5,9 +5,9 @@ import { colors, fontSizes, lineHeights, screenSizes } from '../../../../styles/
 import Slider from 'react-slick'
 
 export const StyledSlider = styled(Slider)`
-  .slick-list {
+  /* .slick-list {
     padding: 0 !important;
-  }
+  } */
 
   .slick-dots {
     position: absolute;

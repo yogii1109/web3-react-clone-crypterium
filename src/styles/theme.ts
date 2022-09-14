@@ -116,6 +116,8 @@ export interface Colors {
   lightestblue: string
   palewhite: string
   purple: string
+  graphlightgreen: string
+  graphlightblue: string
 }
 
 export const colors: Colors = {
@@ -168,6 +170,8 @@ export const colors: Colors = {
   lightestblue: '#eef2f4',
   palewhite: '#fafbfb',
   purple: '#694e96',
+  graphlightgreen: '#F7FBF7',
+  graphlightblue: '#EFF7F4',
 }
 
 export interface Theme {

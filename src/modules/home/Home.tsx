@@ -110,7 +110,7 @@ export const Home: React.FC = withTheme((props: ThemeProps<any>) => {
           <ProtoType />
           <ServiceCarousel />
           <Advantages />
-          {/* <Graph/> */}
+          <Graph />
           <Products />
           <FAQ />
           <News />

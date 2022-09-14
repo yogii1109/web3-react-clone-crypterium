@@ -5,3 +5,6 @@ export const Wrapper = styled.div`
   width: 100%;
   margin-left: -15px;
 `
+export const Box = styled.div`
+  padding: 0 15px;
+`
